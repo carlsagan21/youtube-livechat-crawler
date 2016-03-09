@@ -26,7 +26,7 @@ def get_chat_list(ctr):
     # logger.addHandler(file_handler)
     # logger.addHandler(stream_handler)
     # logger.setLevel(logging.INFO)
-    url = 'https://www.youtube.com/live_chat?v=3YLzxz7QCMI'
+    url = 'https://www.youtube.com/live_chat?v=qtScQubZ6Wg'
 
 
 
