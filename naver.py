@@ -26,20 +26,21 @@ def get_chat_list(ctr):
     # logger.addHandler(file_handler)
     # logger.addHandler(stream_handler)
     # logger.setLevel(logging.INFO)
-    url = 'https://www.youtube.com/live_chat?v=23IyPZxq8pc'
+    url = 'http://sports.news.naver.com/tv/index.nhn?category=etc&gameId=20160310BADUK'
 
 
 
     driver.get(url)
+    d = driver
 
     comments = []
 
     try:
         now = str(time.time())
         WebDriverWait(driver, 3).until(
-            EC.visibility_of_element_located((By.CLASS_NAME, 'comment '))
+            EC.visibility_of_element_located((By.CLASS_NAME, 'cbox_thumb_on'))
         )
-        comment_list = driver.find_elements_by_class_name('comment ')
+        comment_list = driver.find_elements_by_class_name('cbox_thumb_on')
         print(str(ctr) + 'got comment list')
         for comment in comment_list:
             try:
